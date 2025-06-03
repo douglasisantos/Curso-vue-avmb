@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+// import { ref } from 'vue'
 
-const nome = ref('Douglas')
-const profissao = ref('Programador')
+const nome = ('Douglas')
+const profissao = ('Programador')
 </script>
