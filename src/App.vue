@@ -1,26 +1,20 @@
 <template>
   <Header :esta_logado="true" />
+  
   <PrimeiroComponente />
-  <p class="paragrafo-pai">O dado de app é</p>
+  <p class="paragrafo-pai">O dado de app é {{ mensagem }}</p>
+  <p v-show="true">{{ mensagem }}</p>
   <LifeCycle />
   <Pessoa />
 </template>
 
-<script>
-import Header from './components/Header.vue';
-import PrimeiroComponente from './components/PrimeiroComponente.vue';
-import LifeCycle from './components/LifeCycle.vue';
-import Pessoa from './components/Pessoa.vue';
+<script setup lang="ts">
+import Header from './components/Header.vue'
+import PrimeiroComponente from './components/PrimeiroComponente.vue'
+import LifeCycle from './components/LifeCycle.vue'
+import Pessoa from './components/Pessoa.vue'
 
-export default {
-  name: 'App',
-  components: {
-    Header,
-    PrimeiroComponente,
-    LifeCycle,
-    Pessoa
-  }
-}
+const mensagem = 'Olá, Vue.js!'
 </script>
 
 <style>
@@ -37,13 +31,13 @@ a {
 }
 
 .teste {
-  background-color: #2f00ff;
+  background-color: #00ccff;
   padding: 5px;
   border-radius: 4px;
 }
 
 .paragrafo-pai {
-  color: #00ff4c;
+  color: #ffffff;
   font-size: 18px;
 }
 </style>
